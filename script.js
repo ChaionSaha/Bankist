@@ -13,6 +13,7 @@ const headerId = document.querySelector('#header');
 const headerNav = document.querySelector('.header-nav');
 const sections = document.querySelectorAll('.section');
 const lazyImages = document.querySelectorAll('.lazy-img');
+const footerLinks = document.querySelectorAll('.footer__link');
 
 ///////////////////////////////////////
 // Modal window
@@ -261,3 +262,14 @@ const topIntersectionObserver = new IntersectionObserver(
     root: null,
   }
 ).observe(header);
+
+
+/////////////////////////////////////////////////
+// Footer links load fix
+footerLinks.forEach(link =>
+{
+  link.addEventListener('click', e =>
+  {
+    e.preventDefault();
+  })
+})
